@@ -1,8 +1,8 @@
 html {
-    --main-background: #020617;
-    --sidebar-background: #0b1021;
+    --main-background: #000;
+    --sidebar-background: #000;
     --text: #fff;
-    --hover: #7fffd4;
+    --hover: #ea1646;
 }
 
 ::selection {
@@ -22,6 +22,17 @@ body {
 h2 {
     font-family: ms gothic, monospace;
     color: var(--text);
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.1em;
+    padding-bottom: 10px;
+    color: var(--text);
+}
+
+h3 a {
+    text-decoration: none;
 }
 
 label, input {
@@ -45,20 +56,46 @@ footer {
     font-size: 0.7em;
     color: var(--text);
     position: absolute;
-    bottom: 5px;
-    left: 5px;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 footer a:hover {
     color: var(--hover);
 }
 
-#open-menu {
+#openbtn {
+    display: none;
+    transition: 0.5s;
+}
+
+#closebtn {
+    transition: 0.5s;
+}
+
+#arrowStreams, #arrowTV {
+    display: inline-block;
+    transition: 0.2s ease-in-out;
+    color: var(--hover);
+}
+
+#stream-list, #tv-list {
+    transition: 0.2s ease-in-out;
+    display: none;
+    padding-bottom: 30px;
+    margin-top: -10px;
+}
+
+#menu {
     position: absolute;
     top: 10px;
     left: 10px;
     font-size: 1.3em;
-    display: none;
+    display: block;
     z-index: 1;
     padding: 0 6px;
     backdrop-filter: blur(16px) saturate(180%);
@@ -68,31 +105,19 @@ footer a:hover {
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
-#open-menu a {
+#menu a {
     color: var(--text);
     text-decoration: none;
 }
 
-#close-menu {
-    position: relative;
-    left: 195px;
-    top: 0;
-    font-size: 2em;
-}
-
-#close-menu a {
-    text-decoration: none;
-    color: var(--text);
-}
-
-#open-menu a:hover, #close-menu a:hover {
+#menu a:hover {
     color: var(--hover);
 }
 
 #sidebar {
     width: 250px;
-    background: var(--sidebar-background);
-    padding: 20px;
+    background: url("../images/sidebar-background.jpg") repeat top left var(--sidebar-background);
+    padding: 60px 20px 20px;
     overflow-y: auto;
     transition: 0.5s;
     overflow-x: hidden;
@@ -107,6 +132,10 @@ footer a:hover {
     align-content: flex-start;
     gap: 10px;
     overflow-y: auto;
+}
+
+.highlight {
+    color: var(--hover);
 }
 
 .video-item {
