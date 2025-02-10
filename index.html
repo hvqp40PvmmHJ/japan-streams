@@ -11,187 +11,239 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <div id="open-menu">
-        <a href="javascript:void(0)" class="openbtn" onclick="openNav()">☰</a>
+    <div id="menu">
+        <a href="javascript:void(0)" id="openbtn" onclick="openNav()">☰</a>
+        <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">X</a>
     </div>
     <div id="sidebar">
-        <div id="close-menu">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <h2><span class="highlight">日本</span>ライブストリーム</h2>
+        <h3><a href="javascript:void(0)" id="tvstream" onclick="toggleTV()">テレビ<span id="arrowTV">&#10140;</span></a></h3>
+        <div id="tv-list">
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="coYw-eVU0Ks">
+                    JapaNews 24
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="sTAqx_1Yrww">
+                    Kansai News 24
+                </label>
+            </div>
         </div>
-        <h2>日本ライブストリーム</h2>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="4yBWFpbBRTQ">
-                Ashigara
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="MonnMldBFsg">
-                Higashi-Kanagawa 1
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="YjvLUGBaUHs">
-                Higashi-Kanagawa 2
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="4ZHJ7zIRF10">
-                Hon-Atsugi
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="kzQdszcQ2HM">
-                Hoya
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="2vfYbuEdHxU">
-                Ikebukuro
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="fYSE9uSrOCA">
-                Kami-fukuoka
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="RMTEXLFpO0E">
-                Nishi-Hachioji
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="Pn9AQOlbGxs">
-                Ofuna
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="Xg7rOvhoELU">
-                Oji
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="nVA7dk0u8Ks">
-                Oizumi-Gakuen
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="M3uRUx4J1UI">
-                Rainbow Bridge
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="3V8YKzT2viE">
-                Saitama-Shintoshin
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="1VfE8AW7Gug">
-                Seibu-Shinjuku
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="2yqv-PuIuDc">
-                Shakujii-Koen
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="TUd7JORZeWo">
-                Shibuya Crossing
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="dpYlaEe9SZc">
-                Shichirigahama
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="ErHJBXTmm2Q">
-                Shinjuku - main street
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="RkTPGrbAewc">
-                Shinjuku 1
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="GLQhbRGv5qU">
-                Shinjuku 2
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="lA6TaaMGgDo">
-                Shinjuku 3
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="hM1u0nFsyKM">
-                Takao
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="cukpuzpYfEE">
-                Takaosanguchi
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="YZcRxaKmvU4">
-                Takasaki
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="5LhEJpX6EOc">
-                Tennocho
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="CzcsoN3lnBc">
-                Toyoda live 1
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="9Z6oNCGNQOs">
-                Toyoda live 2
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="nu6NE55_X7A">
-                Tokyo Tower
-            </label>
-        </div>
-        <div class="video-item">
-            <label>
-                <input type="checkbox" data-video-id="aBZuUW12lGM">
-                Yono
-            </label>
+        <h3><a href="javascript:void(0)" id="livestream" onclick="toggleStreams()">ライブストリーム<span id="arrowStreams">&#10140;</span></a></h3>
+        <div id="stream-list">
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="SyV6ktqIm3I">
+                    Akihabara
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="4yBWFpbBRTQ">
+                    Ashigara
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="XFLrswaUMqs">
+                    Dotonbori
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="MonnMldBFsg">
+                    Higashi-Kanagawa 1
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="YjvLUGBaUHs">
+                    Higashi-Kanagawa 2
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="4ZHJ7zIRF10">
+                    Hon-Atsugi
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="kzQdszcQ2HM">
+                    Hoya
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="2vfYbuEdHxU">
+                    Ikebukuro
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="fYSE9uSrOCA">
+                    Kami-fukuoka
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="GrEEoEmmrKs">
+                    Kusatsu Onsen Yubatake
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="RMTEXLFpO0E">
+                    Nishi-Hachioji
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="Pn9AQOlbGxs">
+                    Ofuna
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="Xg7rOvhoELU">
+                    Oji
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="nVA7dk0u8Ks">
+                    Oizumi-Gakuen
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="M3uRUx4J1UI">
+                    Rainbow Bridge
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="3V8YKzT2viE">
+                    Saitama-Shintoshin
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="CF1vS8DdBIk">
+                    Sapporo - Tanukikoji 8-Chome
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="1VfE8AW7Gug">
+                    Seibu-Shinjuku
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="2yqv-PuIuDc">
+                    Shakujii-Koen
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="TUd7JORZeWo">
+                    Shibuya Crossing
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="dpYlaEe9SZc">
+                    Shichirigahama
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="ErHJBXTmm2Q">
+                    Shinjuku - main street
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="6dp-bvQ7RWo">
+                    Shinjuku O-Guard Intersection
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="RkTPGrbAewc">
+                    Shinjuku 1
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="GLQhbRGv5qU">
+                    Shinjuku 2
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="lA6TaaMGgDo">
+                    Shinjuku 3
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="hM1u0nFsyKM">
+                    Takao
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="cukpuzpYfEE">
+                    Takaosanguchi
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="YZcRxaKmvU4">
+                    Takasaki
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="5LhEJpX6EOc">
+                    Tennocho
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="_k-5U7IeK8g">
+                    Tokyo Bay
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="CzcsoN3lnBc">
+                    Toyoda live 1
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="9Z6oNCGNQOs">
+                    Toyoda live 2
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="nu6NE55_X7A">
+                    Tokyo Tower
+                </label>
+            </div>
+            <div class="video-item">
+                <label>
+                    <input type="checkbox" data-video-id="aBZuUW12lGM">
+                    Yono
+                </label>
+            </div>
         </div>
     </div>
 
