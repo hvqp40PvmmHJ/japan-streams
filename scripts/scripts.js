@@ -31,14 +31,16 @@ checkboxes.forEach(checkbox => {
 function openNav() {
     document.getElementById("sidebar").style.width = "250px";
     document.getElementById("sidebar").style.margin = "0px";
-    document.getElementById("open-menu").style.display = "none";
+    document.getElementById("openbtn").style.display = "none";
+    document.getElementById("closebtn").style.display = "block";
   }
   
   function closeNav() {
     document.getElementById("sidebar").style.width = "250px";
-    document.getElementById("sidebar").style.margin = "-125px";
+    document.getElementById("sidebar").style.marginLeft = "-250px";
     document.getElementById("main").style.marginLeft= "0";
-    document.getElementById("open-menu").style.display = "block";
+    document.getElementById("openbtn").style.display = "block";
+    document.getElementById("closebtn").style.display = "none";
   }
 
 // Clear checkboxes on page load
@@ -47,3 +49,25 @@ window.addEventListener('load', () => {
         checkbox.checked = false;
     });
 });
+
+function toggleStreams() {
+    var x = document.getElementById("stream-list");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+      document.getElementById("arrowStreams").style.transform = "rotate(0deg)";
+    } else {
+      x.style.display = "block";
+      document.getElementById("arrowStreams").style.transform = "rotate(90deg)";
+    }
+  }
+
+  function toggleTV() {
+    var x = document.getElementById("tv-list");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+        document.getElementById("arrowTV").style.transform = "rotate(0deg)";
+      } else {
+        x.style.display = "block";
+        document.getElementById("arrowTV").style.transform = "rotate(90deg)";
+    }
+  }
